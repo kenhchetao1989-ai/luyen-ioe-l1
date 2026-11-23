@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luyện thi IOE lớp 1</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #172033; background: #f3f6fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    header { padding: 1.1rem 1rem; color: #fff; background: #2457c5; }
+    .bar { width: min(100%, 980px); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+    header h1 { margin: 0; font-size: clamp(1.25rem, 3vw, 1.7rem); }
+    #open-settings { border: 1px solid #ffffff80; background: #ffffff26; }
+    dialog { width: min(92vw, 440px); padding: 1.2rem; border: 0; border-radius: 12px; color: #172033; box-shadow: 0 12px 40px #17203366; }
+    dialog::backdrop { background: #17203366; }
+    dialog fieldset { margin: 0 0 1rem; padding: .7rem .9rem; border: 1px solid #dfe5ef; border-radius: 10px; }
+    dialog legend { padding: 0 .3rem; font-weight: 700; }
+    dialog label { display: block; margin: .45rem 0; cursor: pointer; }
+    dialog label small { display: block; margin-left: 1.6rem; color: #5a6475; }
+    dialog input[type="number"] { width: 5rem; margin-left: .35rem; padding: .3rem; font: inherit; }
+    #confirm-dialog .warn { margin: .5rem 0; padding: .6rem .8rem; border-radius: 8px; color: #8a4b00; background: #fff4e0; }
+    #confirm-dialog .warn[hidden] { display: none; }
+    main { width: min(100% - 2rem, 980px); margin: 1.25rem auto; }
+    .panel { margin-bottom: 1rem; padding: 1.1rem; border: 1px solid #dfe5ef; border-radius: 12px; background: #fff; box-shadow: 0 4px 16px #1720330b; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+    .muted { color: #5a6475; }
+    h2 { margin: 0 0 .6rem; font-size: 1.15rem; }
+    button, .file-button { min-height: 42px; padding: .55rem .9rem; border: 0; border-radius: 8px; color: #fff; background: #2457c5; font: inherit; font-weight: 600; cursor: pointer; }
+    button.secondary { border: 1px solid #cbd4e2; color: #263248; background: #fff; }
+    button.next { background: #2457c5; }
+    button.submit { background: #c2570c; }
+    button.confirm { background: #157347; }
+    button.retake { background: #6b46c1; }
+    button.start { background: #157347; }
+    button:not(:disabled):hover { filter: brightness(1.1); }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button:focus-visible, .file-button:focus-within { outline: 3px solid #90b4ff; outline-offset: 2px; }
+    input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .file-button { display: inline-flex; align-items: center; }
+    #exam-list { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .5rem; }
+    #status { margin: .75rem 0 0; }
+    #status.error { color: #b42318; }
+    #status.success { color: #157347; }
+    #exam-notice { margin: 0 0 .75rem; padding: .65rem .8rem; border-radius: 8px; color: #b42318; background: #fff0ef; }
+    #exam-notice[hidden] { display: none; }
+    #exam { display: none; }
+    #nav { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .9rem; max-height: 9.5rem; overflow-y: auto; }
+    #nav button { min-width: 42px; min-height: 38px; padding: .3rem; color: #263248; border: 1px solid #cbd4e2; background: #fff; }
+    #nav button.answered { border-color: #2457c5; background: #eaf0ff; }
+    #nav button.current { outline: 2px solid #2457c5; outline-offset: 1px; }
+    #nav button.correct { color: #12643e; border-color: #66bd91; background: #e9f7ef; }
+    #nav button.incorrect { color: #a52822; border-color: #e49a96; background: #fff0ef; }
+    #nav button.ungraded { color: #6b7280; border-style: dashed; }
+    #prompt { margin: .6rem 0 .8rem; font-size: 1.3rem; line-height: 1.45; }
+    #stimulus[hidden], #audio-note[hidden] { display: none; }
+    #stimulus { display: block; max-width: min(100%, 420px); max-height: 280px; margin: 0 0 1rem; border-radius: 8px; }
+    #audio-note { margin: 0 0 1rem; padding: .6rem .8rem; border-radius: 8px; background: #fff7e0; }
+    #audio-note audio { display: block; margin-top: .4rem; width: 100%; }
+    #options { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .option { display: flex; align-items: center; gap: .7rem; padding: .75rem; border: 2px solid #d7deea; border-radius: 10px; cursor: pointer; background: #fff; }
+    .option.picture { flex-direction: column; align-items: stretch; text-align: center; }
+    .option img { width: 100%; max-height: 150px; object-fit: contain; }
+    .option:has(input:checked) { border-color: #2457c5; background: #f0f4ff; }
+    .option input { accent-color: #2457c5; }
+    .option.correct { border-color: #3aa573; background: #e9f7ef; }
+    .option.incorrect { border-color: #d9534f; background: #fff0ef; }
+    #rearrange { display: none; }
+    #built, #pool { display: flex; gap: .5rem; flex-wrap: wrap; min-height: 52px; padding: .6rem; border: 2px dashed #b9c4d8; border-radius: 10px; }
+    #pool { margin-top: .6rem; border-style: solid; border-color: #e3e8f2; background: #f8fafd; }
+    #rearrange .chip { min-height: 40px; color: #172033; border: 1px solid #b9c4d8; background: #fff; font-size: 1.05rem; }
+    #feedback { margin-top: 1rem; padding: .85rem; border-radius: 8px; background: #f3f6fb; }
+    #feedback[hidden], #result[hidden] { display: none; }
+    #answer-required { margin: .75rem 0 0; padding: .65rem .8rem; border-radius: 8px; color: #a52822; background: #fff0ef; font-weight: 600; }
+    #answer-required[hidden] { display: none; }
+    #feedback.good { color: #12643e; background: #e9f7ef; }
+    #feedback.bad { color: #a52822; background: #fff0ef; }
+    #timer { padding: .25rem .55rem; border-radius: 6px; color: #12643e; background: #e9f7ef; font-weight: 700; font-variant-numeric: tabular-nums; }
+    #timer.warning { color: #a52822; background: #fff0ef; }
+    #feedback summary { cursor: pointer; margin-top: .5rem; }
+    #feedback details img { max-width: 100%; margin-top: .5rem; border: 1px solid #dfe5ef; border-radius: 8px; }
+    #score { font-size: 1.15rem; font-weight: 700; }
+    #history-panel[hidden] { display: none; }
+    #history-groups h3 { margin: 1rem 0 .1rem; font-size: 1.05rem; }
+    #history-groups p { margin: 0 0 .4rem; }
+    .hist-table { width: 100%; border-collapse: collapse; }
+    .hist-table th, .hist-table td { padding: .4rem .5rem; border-bottom: 1px solid #e3e8f2; text-align: left; }
+    .hist-table td:nth-child(3) { font-weight: 700; white-space: nowrap; }
+    .hist-table tr.best { background: #fff7e0; }
+    #result-note { margin: .2rem 0 .8rem; font-weight: 600; }
+    #restart { min-height: 34px; padding: .25rem .7rem; }
+    @media (max-width: 560px) { main { width: min(100% - 1rem, 980px); } .panel { padding: .9rem; } #prompt { font-size: 1.15rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <h1>Luyện thi IOE lớp 1</h1>
+      <button id="open-settings" type="button" aria-haspopup="dialog">⚙ Cài đặt</button>
+    </div>
+  </header>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+    <h2 id="confirm-title">📝 Xác nhận nộp bài</h2>
+    <p id="confirm-summary"></p>
+    <p id="confirm-warning" class="warn" hidden></p>
+    <p class="muted">Sau khi nộp, bạn không thể sửa đáp án (có thể thi lại sau).</p>
+    <div class="row" style="justify-content:flex-end">
+      <button id="confirm-cancel" class="secondary" type="button">↩ Quay lại làm tiếp</button>
+      <button id="confirm-ok" class="confirm" type="button">✅ Xác nhận nộp bài</button>
+    </div>
+  </dialog>
+  <dialog id="settings" aria-labelledby="settings-title">
+    <h2 id="settings-title">Cài đặt thi</h2>
+    <fieldset>
+      <legend>Thông tin học sinh</legend>
+      <label for="student-name">Tên của bé</label>
+      <input id="student-name" type="text" maxlength="50" autocomplete="given-name" placeholder="Ví dụ: Minh Anh">
+    </fieldset>
+    <fieldset>
+      <legend>Khi nào kiểm tra đáp án?</legend>
+      <label><input type="radio" name="check-mode" value="instant"> Kiểm tra ngay khi chọn đáp án
+        <small>Câu sắp xếp được kiểm tra khi đã xếp đủ các từ.</small></label>
+      <label><input type="radio" name="check-mode" value="next"> Kiểm tra khi nhấn "Câu tiếp"
+        <small>Nhấn lần 1 để xem đúng/sai, nhấn lần 2 để sang câu kế.</small></label>
+    </fieldset>
+    <fieldset>
+      <legend>Âm thanh</legend>
+      <label><input type="checkbox" id="sound-on"> Phát tiếng bíp đúng/sai</label>
+    </fieldset>
+    <fieldset>
+      <legend>Thời gian làm bài</legend>
+      <label><input type="radio" name="time-mode" value="30s"> 30 giây / 1 câu
+        <small>50 câu có 25 phút; đề khác tự tính theo số câu.</small></label>
+      <label><input type="radio" name="time-mode" value="60s"> 60 giây / 1 câu
+        <small>50 câu có 50 phút; đề khác tự tính theo số câu.</small></label>
+      <label><input type="radio" name="time-mode" value="total"> Tổng thời gian cho toàn bộ đề:
+        <input id="custom-minutes" type="number" min="1" max="300" step="1" value="30" aria-label="Tổng số phút cho toàn bộ đề"> phút
+        <small>Nhập tổng số phút dành cho tất cả câu hỏi trong đề đang thi.</small></label>
+      <small class="muted">Cài đặt được lưu và áp dụng cho bài thi bắt đầu hoặc thi lại tiếp theo.</small>
+    </fieldset>
+    <div class="row" style="justify-content:flex-end"><button id="close-settings" type="button">Xong</button></div>
+  </dialog>
+  <main>
+    <section class="panel" aria-labelledby="load-heading">
+      <h2 id="load-heading">Chọn bộ đề</h2>
+      <p class="muted">Bộ đề được đọc từ thư mục <code>exam_out/</code> (do <code>pdf_to_exam.py</code> tạo ra); đáp án và nội dung <code>word_listent</code> được áp dụng từ <code>answers.json</code>. Hãy mở trang qua máy chủ cục bộ: <code>py -m http.server 8000</code> rồi vào <code>http://localhost:8000/</code>.</p>
+      <div id="exam-list"></div>
+      <div class="row" style="margin-top:.8rem; justify-content:flex-start">
+        <label class="file-button secondary" for="json-file" style="color:#263248;background:#fff;border:1px solid #cbd4e2">Hoặc chọn file exam_XX.json</label>
+        <input id="json-file" type="file" accept=".json,application/json">
+        <span id="file-name" class="muted"></span>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p id="welcome" class="muted" aria-live="polite"></p>
+    </section>
+
+    <section id="exam-preview" class="panel" aria-labelledby="preview-title" hidden>
+      <h2 id="preview-title"></h2>
+      <p id="preview-detail" class="muted"></p>
+      <div class="row" style="justify-content:flex-start">
+        <button id="begin-exam" class="start" type="button">▶ Bắt đầu thi</button>
+        <button id="preview-retake" class="retake" type="button" hidden>🔄 Thi lại</button>
+      </div>
+    </section>
+
+    <section id="history-panel" class="panel" aria-labelledby="history-heading" hidden>
+      <div class="row">
+        <h2 id="history-heading">Lịch sử điểm</h2>
+        <button id="clear-history" class="secondary" type="button">Xóa lịch sử</button>
+      </div>
+      <p id="history-summary" class="muted"></p>
+      <div id="history-groups"></div>
+    </section>
+
+    <section id="exam" aria-label="Bài thi">
+      <div class="panel">
+        <p id="exam-notice" role="alert" hidden></p>
+        <div class="row">
+          <strong id="exam-title"></strong>
+          <span><span id="progress" class="muted"></span> <span id="timer" role="timer" aria-live="off"></span> <button id="restart" class="secondary" type="button">🔄 Làm lại từ đầu</button></span>
+        </div>
+        <div id="nav" aria-label="Chọn câu hỏi"></div>
+      </div>
+      <div class="panel">
+        <div class="row"><strong id="q-number"></strong><span id="q-hint" class="muted"></span></div>
+        <h2 id="prompt"></h2>
+        <img id="stimulus" alt="Hình minh họa của câu hỏi" hidden>
+        <div id="audio-note" hidden></div>
+        <div id="options"></div>
+        <div id="rearrange">
+          <div id="built" aria-label="Câu của bạn"></div>
+          <div id="pool" aria-label="Các từ cần sắp xếp"></div>
+          <button id="reset-words" class="secondary" type="button" style="margin-top:.6rem">Làm lại</button>
+        </div>
+        <div id="feedback" hidden></div>
+        <div class="row" style="margin-top:1.1rem">
+          <button id="prev" class="secondary" type="button">&lt; Câu trước</button>
+          <div class="row">
+            <button id="next" class="next" type="button">Câu tiếp &gt;</button>
+            <button id="submit" class="submit" type="button">📝 Nộp bài</button>
+          </div>
+        </div>
+        <p id="answer-required" role="alert" hidden></p>
+      </div>
+      <div id="result" class="panel" hidden>
+        <div class="row"><h2>Kết quả</h2><p id="score"></p></div>
+        <p id="result-detail" class="muted"></p>
+        <p id="result-greeting"></p>
+        <p id="result-note"></p>
+        <button id="retake" class="retake" type="button">🔄 Thi lại bộ đề này</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    "use strict";
+
+    const BASE = "exam_out/";
+    const $ = (selector) => document.querySelector(selector);
+    let answerPatch = {};
+    let answerPatchError = "";
+    let indexedExamFiles = new Set();
+    const answers = new Map();   // question index -> label, or array of words for rearrange
+    let questions = [];
+    let current = 0;
+    let submitted = false;
+    const listenPlays = new Map();
+    let imageBase = BASE;
+    const checked = new Set();   // questions already revealed by pressing "Câu tiếp"
+    const shown = (index) => submitted || checked.has(index);
+    const needsCheck = (index) => !shown(index) && answers.has(index) && isGraded(questions[index]);
+
+    let audioContext;
+    const SETTINGS_KEY = "ioe.settings.v1";
+    const settings = Object.assign({ checkMode: "next", sound: true, timeMode: "30s", customMinutes: 30, studentName: "" }, (() => {
+      try { return JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {}; } catch (error) { return {}; }
+    })());
+    if (settings.checkMode !== "instant") settings.checkMode = "next";
+    settings.sound = settings.sound !== false;
+    if (settings.timeMode === "perQuestion") settings.timeMode = "30s";
+    if (settings.timeMode === "30" || settings.timeMode === "50" || settings.timeMode === "custom") {
+      if (settings.timeMode === "30" || settings.timeMode === "50") settings.customMinutes = Number(settings.timeMode);
+      settings.timeMode = "total";
+    }
+    if (!["30s", "60s", "total"].includes(settings.timeMode)) settings.timeMode = "30s";
+    settings.customMinutes = Number.isFinite(Number(settings.customMinutes))
+      ? Math.min(300, Math.max(1, Math.round(Number(settings.customMinutes)))) : 30;
+    settings.studentName = typeof settings.studentName === "string" ? settings.studentName.trim().slice(0, 50) : "";
+    saveSettings();
+
+    function renderWelcome() {
+      $("#welcome").textContent = settings.studentName
+        ? "Xin chào, " + settings.studentName + "! Chúc bé làm bài thật tốt nhé."
+        : "Chúc bé làm bài thật tốt nhé!";
+    }
+
+    function saveSettings() {
+      try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (error) { /* storage unavailable */ }
+    }
+
+    function beep(good) {
+      if (!settings.sound) return;
+      try {
+        audioContext = audioContext || new (window.AudioContext || window.webkitAudioContext)();
+        const notes = good ? [[660, 0], [880, 0.14]] : [[220, 0], [160, 0.18]];
+        notes.forEach(([freq, delay]) => {
+          const osc = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+          const start = audioContext.currentTime + delay;
+          osc.type = good ? "sine" : "sawtooth";
+          osc.frequency.value = freq;
+          gain.gain.setValueAtTime(0.18, start);
+          gain.gain.exponentialRampToValueAtTime(0.001, start + 0.22);
+          osc.connect(gain).connect(audioContext.destination);
+          osc.start(start);
+          osc.stop(start + 0.24);
+        });
+      } catch (error) { /* sound is optional */ }
+    }
+
+    // In "instant" mode a question is checked as soon as it is answered (rearrange: once every word is placed).
+    function autoCheck() {
+      if (settings.checkMode !== "instant" || !needsCheck(current)) return;
+      const q = questions[current];
+      if (q.type === "rearrange" && answers.get(current).length < q.words.length) return;
+      checked.add(current);
+      beep(isCorrect(q, current));
+    }
+
+    function setStatus(message, kind) {
+      $("#status").textContent = message;
+      $("#status").className = kind || "";
+    }
+
+    const asList = (answer) => (Array.isArray(answer) ? answer : [answer]);
+    const normalize = (text) => text.toLowerCase().replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
+    const isGraded = (q) => q.answer !== null && q.answer !== undefined;
+    function listenText(q) {
+      if (typeof q.word_listent === "string" && q.word_listent.trim()) return q.word_listent.trim();
+      if (!isGraded(q)) return "";
+      const correct = asList(q.answer);
+      const option = (q.options || []).find((item) => correct.includes(item.label));
+      return option && typeof option.text === "string" ? option.text.trim() : "";
+    }
+
+    function speakListenText(text) {
+      if (!("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") {
+        setStatus("Trình duyệt này không hỗ trợ phát âm tự động.", "error");
+        return false;
+      }
+      try {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "en-US";
+        utterance.rate = 0.85;
+        window.speechSynthesis.speak(utterance);
+        return true;
+      } catch (error) {
+        setStatus("Không thể phát nội dung nghe: " + error.message, "error");
+        return false;
+      }
+    }
+
+    function stopListenSpeech() {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    }
+
+    function updateListenButton(button, playCount) {
+      button.textContent = playCount === 0
+        ? "🔊 Nghe từ"
+        : playCount < 4 ? "🔁 Nghe lại (còn " + (4 - playCount) + " lần)" : "Đã hết lượt nghe";
+      button.disabled = submitted || playCount >= 4;
+    }
+
+    function playListenOnEntry(index) {
+      const q = questions[index];
+      const playCount = listenPlays.get(index) || 0;
+      if (submitted || !q || !q.audio_required || playCount >= 4) return;
+      const text = listenText(q);
+      if (!text || !speakListenText(text)) return;
+      listenPlays.set(index, playCount + 1);
+      saveProgress();
+      if (index === current) updateListenButton($("#audio-note button"), playCount + 1);
+    }
+
+    const hasAnswer = (index) => {
+      if (!answers.has(index)) return false;
+      const q = questions[index];
+      const given = answers.get(index);
+      return q.type !== "rearrange" || (Array.isArray(given) && given.length === q.words.length);
+    };
+
+    function requireAnswerBeforeLeaving() {
+      if (hasAnswer(current)) return true;
+      const q = questions[current];
+      $("#answer-required").textContent = q.type === "rearrange"
+        ? "Vui lòng sắp xếp đủ các từ trước khi sang câu khác."
+        : "Vui lòng chọn một đáp án trước khi sang câu khác.";
+      $("#answer-required").hidden = false;
+      $("#answer-required").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      return false;
+    }
+
+    function isCorrect(q, index) {
+      const given = answers.get(index);
+      if (!isGraded(q) || given === undefined) return false;
+      if (q.type === "rearrange") return normalize(given.join(" ")) === normalize(q.answer);
+      return asList(q.answer).includes(given);
+    }
+
+    function validate(data) {
+      if (!data || !Array.isArray(data.questions) || data.questions.length === 0) {
+        throw new Error("File cần có mảng questions không rỗng.");
+      }
+      return data;
+    }
+
+    function applyAnswerPatch(data) {
+      const questions = data.questions.map((question) => ({
+        ...question,
+        options: Array.isArray(question.options) ? question.options.map((option) => ({ ...option })) : question.options,
+      }));
+      questions.forEach((question) => {
+        const values = answerPatch[String(question.id)];
+        if (values === undefined) return;
+        const fields = typeof values === "string" ? { answer: values } : values;
+        if (!fields || typeof fields !== "object" || Array.isArray(fields)) {
+          throw new Error("answers.json có dữ liệu không hợp lệ cho câu " + question.id + ".");
+        }
+        Object.entries(fields).forEach(([field, value]) => {
+          if (field !== "options") {
+            question[field] = value;
+            return;
+          }
+          if (!value || typeof value !== "object" || Array.isArray(value) || !Array.isArray(question.options)) {
+            throw new Error("answers.json có options không hợp lệ cho câu " + question.id + ".");
+          }
+          question.options.forEach((option) => {
+            if (Object.prototype.hasOwnProperty.call(value, option.label)) option.text = value[option.label];
+          });
+        });
+      });
+      return { ...data, questions };
+    }
+
+    // The stored word order matches the answer, so shuffle it (never leaving it solved).
+    function shuffled(words) {
+      if (words.length < 2) return words.slice();
+      let copy;
+      do {
+        copy = words.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+      } while (copy.every((word, i) => word === words[i]));
+      return copy;
+    }
+
+    const STORE_KEY = "ioe.practice.v1";
+    let examKey = null;      // identifies the exam in localStorage
+    let currentAttempt = 0;  // attempt number of the submitted result being shown
+    let currentData = null;  // exam JSON being taken, used by "Làm lại từ đầu"
+    let selectedExam = null;
+    let examButtons = [];    // {button, exam} for the exam list, to show saved scores
+    let timerDeadline = 0;
+    let timerId = null;
+
+    function durationFor(questionCount) {
+      const milliseconds = settings.timeMode === "60s"
+        ? questionCount * 60 * 1000
+        : settings.timeMode === "total"
+          ? settings.customMinutes * 60 * 1000
+          : questionCount * 30 * 1000;
+      return Math.max(1000, Math.round(milliseconds));
+    }
+
+    function updateTimer() {
+      if (submitted || !timerDeadline) return;
+      const seconds = Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
+      const minutes = Math.floor(seconds / 60);
+      $("#timer").textContent = "⏱ " + String(minutes).padStart(2, "0") + ":" + String(seconds % 60).padStart(2, "0");
+      $("#timer").classList.toggle("warning", seconds <= 5 * 60);
+      if (seconds === 0) finish(true);
+    }
+
+    function readStore() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(STORE_KEY)) || {};
+        const store = { progress: stored.progress || {}, history: Array.isArray(stored.history) ? stored.history : [] };
+        if (Object.prototype.hasOwnProperty.call(stored, "activeExamKey")) store.activeExamKey = stored.activeExamKey;
+        return store;
+      } catch (error) {
+        return { progress: {}, history: [] };
+      }
+    }
+
+    function getActiveExamKey(store) {
+      if (Object.prototype.hasOwnProperty.call(store, "activeExamKey")) {
+        const key = store.activeExamKey;
+        return key && store.progress[key] && !store.progress[key].submitted ? key : null;
+      }
+      return Object.keys(store.progress).find((key) => store.progress[key] && !store.progress[key].submitted) || null;
+    }
+
+    function canSelectExam(key) {
+      const store = readStore();
+      const activeKey = getActiveExamKey(store);
+      if (!activeKey || activeKey === key) return true;
+      const activeButton = examButtons.find(({ exam }) => exam.file === activeKey);
+      const activeTitle = currentData && examKey === activeKey && currentData.title
+        ? currentData.title
+        : activeButton ? activeButton.exam.title : activeKey;
+      const message = "Không thể chọn đề khác khi đang thi. Bạn đang làm dở đề \"" + activeTitle + "\". Hãy nộp bài trước khi chọn đề khác.";
+      setStatus(message, "error");
+      $("#exam-notice").textContent = message;
+      $("#exam-notice").hidden = false;
+      if (examKey === activeKey && currentData) $("#exam").scrollIntoView({ behavior: "smooth", block: "start" });
+      return false;
+    }
+
+    function writeStore(store) {
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch (error) { /* storage unavailable or full */ }
+    }
+
+    function saveProgress() {
+      if (!examKey) return;
+      const store = readStore();
+      store.progress[examKey] = {
+        count: questions.length, current, submitted, attempt: currentAttempt, deadline: timerDeadline, checked: [...checked], answers: [...answers],
+        listenPlays: [...listenPlays],
+        words: questions.map((q) => (q.type === "rearrange" ? q.words : null)),
+      };
+      store.activeExamKey = submitted ? null : examKey;
+      writeStore(store);
+    }
+
+    function clearProgress(key) {
+      const store = readStore();
+      delete store.progress[key || examKey];
+      writeStore(store);
+    }
+
+    // Attempts of one exam in chronological order, numbered 1..n (entries saved before numbering get derived numbers).
+    function groupHistory(history) {
+      const groups = new Map();
+      history.slice().sort((a, b) => a.at - b.at).forEach((item) => {
+        if (!groups.has(item.key)) groups.set(item.key, { key: item.key, title: item.title, attempts: [], best: 0 });
+        const group = groups.get(item.key);
+        group.title = item.title;
+        group.attempts.push({ ...item, attempt: item.attempt || group.attempts.length + 1 });
+        group.best = Math.max(group.best, item.percent);
+      });
+      return groups;
+    }
+
+    function recordResult(correct, total) {
+      const store = readStore();
+      const group = groupHistory(store.history).get(examKey);
+      const attempt = group ? Math.max(...group.attempts.map((a) => a.attempt)) + 1 : 1;
+      store.history.unshift({
+        key: examKey, title: currentData.title || "Bài thi", attempt, correct, total,
+        percent: Math.round(correct * 100 / Math.max(total, 1)), at: Date.now(),
+      });
+      store.history = store.history.slice(0, 500);
+      writeStore(store);
+      return attempt;
+    }
+
+    const bestLabel = (group) =>
+      "Lần " + group.attempts.filter((a) => a.percent === group.best).map((a) => a.attempt).join(", ") + " (" + group.best + "%)";
+
+    function renderHistory() {
+      const { history, progress } = readStore();
+      const groups = groupHistory(history);
+      $("#history-panel").hidden = history.length === 0;
+      $("#history-summary").textContent = history.length
+        ? "Tổng cộng " + history.length + " lần thi ở " + groups.size + " bộ đề. Dòng nền vàng là lần có điểm cao nhất." : "";
+      const box = $("#history-groups");
+      box.replaceChildren();
+      [...groups.values()]
+        .sort((a, b) => b.attempts[b.attempts.length - 1].at - a.attempts[a.attempts.length - 1].at)
+        .forEach((group) => {
+          const title = document.createElement("h3");
+          title.textContent = group.title;
+          const info = document.createElement("p");
+          info.className = "muted";
+          info.textContent = group.attempts.length + " lần thi · cao nhất: " + bestLabel(group);
+          const table = document.createElement("table");
+          table.className = "hist-table";
+          table.createTHead().insertRow().append(...["Lần", "Thời gian", "Điểm", ""].map((text) => {
+            const th = document.createElement("th");
+            th.textContent = text;
+            return th;
+          }));
+          const body = table.createTBody();
+          group.attempts.forEach((item) => {
+            const row = body.insertRow();
+            row.insertCell().textContent = "Lần " + item.attempt;
+            row.insertCell().textContent = new Date(item.at).toLocaleString("vi-VN");
+            row.insertCell().textContent = item.correct + "/" + item.total + " (" + item.percent + "%)";
+            const note = row.insertCell();
+            if (item.percent === group.best) {
+              row.className = "best";
+              note.textContent = "🏆 Cao nhất";
+            }
+          });
+          box.append(title, info, table);
+        });
+      examButtons.forEach(({ button, exam }) => {
+        const group = groups.get(exam.file);
+        const saved = progress[exam.file];
+        button.textContent = exam.title + " (" + exam.count + " câu)" +
+          (group ? " · đã thi " + group.attempts.length + " lần, cao nhất " + group.best + "%" : "") +
+          (saved && !saved.submitted ? " · đang làm dở" : "");
+      });
+    }
+
+    function startExam(data, key, fresh) {
+      if (timerId !== null) clearInterval(timerId);
+      timerId = null;
+      stopListenSpeech();
+      currentData = data;
+      examKey = key;
+      const saved = fresh ? null : readStore().progress[key];
+      const usable = saved && saved.count === data.questions.length;
+      const savedWords = (i, words) => {
+        const stored = usable && saved.words[i];
+        return Array.isArray(stored) && stored.slice().sort().join("|") === words.slice().sort().join("|") ? stored : shuffled(words);
+      };
+      questions = data.questions.map((q, i) => (q.type === "rearrange" ? { ...q, words: savedWords(i, q.words) } : q));
+      answers.clear();
+      checked.clear();
+      listenPlays.clear();
+      current = 0;
+      submitted = false;
+      currentAttempt = 0;
+      if (usable) {
+        saved.answers.filter(([i]) => i >= 0 && i < questions.length).forEach(([i, value]) => answers.set(i, value));
+        saved.checked.filter((i) => i >= 0 && i < questions.length).forEach((i) => checked.add(i));
+        (Array.isArray(saved.listenPlays) ? saved.listenPlays : []).forEach(([i, count]) => {
+          if (i >= 0 && i < questions.length && Number.isInteger(count) && count >= 0 && count <= 4) {
+            listenPlays.set(i, count);
+          }
+        });
+        current = Math.min(Math.max(saved.current | 0, 0), questions.length - 1);
+        submitted = !!saved.submitted;
+        currentAttempt = saved.attempt | 0;
+      }
+      timerDeadline = usable && Number.isFinite(saved.deadline) && saved.deadline > 0
+        ? saved.deadline : Date.now() + durationFor(questions.length);
+      $("#exam-title").textContent = data.title || "Bài thi";
+      $("#exam-preview").hidden = true;
+      $("#result").hidden = true;
+      $("#exam").style.display = "block";
+      if (submitted) showResult(computeStats());
+      render();
+      updateTimer();
+      if (!submitted) timerId = setInterval(updateTimer, 1000);
+      saveProgress();
+      $("#exam").scrollIntoView({ behavior: "smooth" });
+      return !!usable;
+    }
+
+    function selectExam(data, key) {
+      if (!canSelectExam(key)) return false;
+      selectedExam = { data, key };
+      const { progress, history } = readStore();
+      const saved = progress[key];
+      const usable = saved && saved.count === data.questions.length;
+      const attempts = groupHistory(history).get(key);
+      $("#preview-title").textContent = data.title || "Bài thi";
+      $("#preview-retake").hidden = !usable && !attempts;
+      if (usable && saved.submitted) {
+        $("#begin-exam").textContent = "📊 Xem kết quả lần trước";
+        const latest = attempts && attempts.attempts[attempts.attempts.length - 1];
+        $("#preview-detail").textContent = data.questions.length + " câu hỏi · đã thi " +
+          (attempts ? attempts.attempts.length : 1) + " lần" +
+          (latest ? " · lần gần nhất: " + latest.correct + "/" + latest.total + " câu (" + latest.percent + "%)" : "");
+      } else if (usable) {
+        $("#begin-exam").textContent = "▶ Tiếp tục bài thi";
+        $("#preview-detail").textContent = data.questions.length + " câu hỏi · đã trả lời " +
+          saved.answers.length + "/" + data.questions.length + " câu. Thời gian vẫn tính từ lúc bắt đầu.";
+      } else {
+        $("#begin-exam").textContent = "▶ Bắt đầu thi";
+        $("#preview-detail").textContent = data.questions.length + " câu hỏi · thời gian thi theo cài đặt hiện tại.";
+      }
+      $("#exam-preview").hidden = false;
+      $("#exam-preview").scrollIntoView({ behavior: "smooth", block: "start" });
+      return true;
+    }
+
+    function beginSelectedExam() {
+      if (!selectedExam) return;
+      const { data, key } = selectedExam;
+      const resumed = startExam(data, key);
+      setStatus(resumed ? "Đã khôi phục bài thi." : "Bài thi đã bắt đầu.", "success");
+      playListenOnEntry(current);
+      $("#exam").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function retakeSelectedExam() {
+      if (!selectedExam) return;
+      const saved = readStore().progress[selectedExam.key];
+      if (saved && !saved.submitted && !confirm("Bỏ bài đang làm và bắt đầu một lần thi mới?")) return;
+      clearProgress(selectedExam.key);
+      const { data, key } = selectedExam;
+      startExam(data, key, true);
+      renderHistory();
+      setStatus("Bài thi mới đã bắt đầu.", "success");
+      playListenOnEntry(current);
+      $("#exam").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function renderNav() {
+      const nav = $("#nav");
+      nav.replaceChildren();
+      questions.forEach((q, i) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = q.id ?? i + 1;
+        button.setAttribute("aria-label", "Đến câu " + (q.id ?? i + 1));
+        if (answers.has(i)) button.classList.add("answered");
+        if (i === current) button.classList.add("current");
+        if (shown(i)) {
+          if (!isGraded(q)) button.classList.add("ungraded");
+          else button.classList.add(isCorrect(q, i) ? "correct" : "incorrect");
+        }
+        button.addEventListener("click", () => {
+          const changed = i !== current;
+          if (changed && !requireAnswerBeforeLeaving()) return;
+          if (changed) stopListenSpeech();
+          current = i;
+          render();
+          if (changed) playListenOnEntry(current);
+        });
+        nav.append(button);
+      });
+    }
+
+    const src = (path) => imageBase + path;
+
+    function renderRearrange(q) {
+      const chosen = answers.get(current) || [];
+      const remaining = q.words.slice();
+      chosen.forEach((word) => remaining.splice(remaining.indexOf(word), 1));
+      const fill = (container, words, onClick) => {
+        container.replaceChildren();
+        words.forEach((word) => {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = "chip";
+          chip.textContent = word;
+          chip.disabled = shown(current);
+          chip.addEventListener("click", () => onClick(word));
+          container.append(chip);
+        });
+      };
+      fill($("#built"), chosen, (word) => {
+        const next = chosen.slice();
+        next.splice(next.indexOf(word), 1);
+        next.length ? answers.set(current, next) : answers.delete(current);
+        render();
+      });
+      fill($("#pool"), remaining, (word) => { answers.set(current, chosen.concat(word)); autoCheck(); render(); });
+      $("#reset-words").disabled = shown(current);
+      $("#reset-words").onclick = () => { answers.delete(current); render(); };
+    }
+
+    function renderOptions(q) {
+      const box = $("#options");
+      box.replaceChildren();
+      const correctSet = isGraded(q) ? asList(q.answer) : [];
+      q.options.forEach((option) => {
+        const label = document.createElement("label");
+        label.className = "option" + (option.image ? " picture" : "");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "q" + current;
+        input.checked = answers.get(current) === option.label;
+        input.disabled = shown(current);
+        input.addEventListener("change", () => { answers.set(current, option.label); autoCheck(); render(); });
+        const content = document.createElement("span");
+        if (option.image) {
+          const img = document.createElement("img");
+          img.src = src(option.image);
+          img.alt = "Đáp án " + option.label;
+          content.append(img, document.createTextNode(option.label));
+        } else {
+          content.textContent = option.label + ". " + option.text;
+        }
+        label.append(input, content);
+        if (shown(current) && correctSet.includes(option.label)) label.classList.add("correct");
+        if (shown(current) && answers.get(current) === option.label && !correctSet.includes(option.label)) {
+          label.classList.add("incorrect");
+        }
+        box.append(label);
+      });
+    }
+
+    function renderFeedback(q) {
+      const feedback = $("#feedback");
+      feedback.hidden = !shown(current);
+      if (!shown(current)) return;
+      feedback.className = isGraded(q) ? (isCorrect(q, current) ? "good" : "bad") : "";
+      feedback.replaceChildren();
+      const verdict = document.createElement("div");
+      if (!isGraded(q)) {
+        verdict.textContent = "Câu này chưa có đáp án trong dữ liệu nên không được tính điểm.";
+      } else {
+        const shown = q.type === "rearrange" ? q.answer : asList(q.answer).join(" hoặc ");
+        verdict.textContent = (isCorrect(q, current) ? "Chính xác! " : "Chưa đúng. Đáp án: " + shown.replace(/[.!?]+$/, "") + ". ") +
+          (q.explanation || "");
+      }
+      feedback.append(verdict);
+      if (q.source_image) {
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = "Xem câu hỏi gốc trong đề";
+        const img = document.createElement("img");
+        img.src = src(q.source_image);
+        img.alt = "Ảnh gốc câu " + q.id;
+        details.append(summary, img);
+        feedback.append(details);
+      }
+    }
+
+    function render() {
+      const q = questions[current];
+      $("#exam-notice").hidden = true;
+      $("#exam-notice").textContent = "";
+      $("#answer-required").hidden = true;
+      $("#progress").textContent = "Đã trả lời " + answers.size + "/" + questions.length;
+      $("#q-number").textContent = "Câu " + (q.id ?? current + 1);
+      $("#q-hint").textContent = q.type === "rearrange" ? "Sắp xếp các từ thành câu" : "Chọn một đáp án";
+      $("#prompt").textContent = q.prompt;
+
+      const stimulus = $("#stimulus");
+      stimulus.hidden = !q.image;
+      if (q.image) stimulus.src = src(q.image);
+
+      const note = $("#audio-note");
+      note.hidden = !q.audio_required;
+      note.replaceChildren();
+      if (q.audio_required) {
+        note.append(document.createTextNode("Câu nghe: "));
+        if (q.audio) {
+          const audio = document.createElement("audio");
+          audio.controls = true;
+          audio.src = src(q.audio);
+          note.append(audio);
+        }
+        const text = listenText(q);
+        if (text) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "secondary";
+          const playCount = listenPlays.get(current) || 0;
+          updateListenButton(button, playCount);
+          button.addEventListener("click", () => {
+            const count = listenPlays.get(current) || 0;
+            if (submitted || count >= 4 || !speakListenText(text)) return;
+            listenPlays.set(current, count + 1);
+            saveProgress();
+            updateListenButton(button, count + 1);
+          });
+          note.append(document.createTextNode(" Dùng nút nghe lại tối đa 3 lần sau lượt nghe đầu. "), button);
+        } else if (!q.audio) {
+          note.append(document.createTextNode("Chưa có nội dung word_listent (hoặc đáp án dạng chữ) để phát âm."));
+        }
+      }
+
+      const rearrange = q.type === "rearrange";
+      $("#options").style.display = rearrange ? "none" : "grid";
+      $("#rearrange").style.display = rearrange ? "block" : "none";
+      rearrange ? renderRearrange(q) : renderOptions(q);
+
+      $("#prev").disabled = current === 0;
+      $("#next").disabled = current === questions.length - 1 && !needsCheck(current);
+      $("#submit").disabled = submitted;
+      renderFeedback(q);
+      renderNav();
+      saveProgress();
+    }
+
+    function computeStats() {
+      const graded = questions.map((q, i) => ({ q, i })).filter((x) => isGraded(x.q));
+      return {
+        correct: graded.filter((x) => isCorrect(x.q, x.i)).length,
+        total: graded.length,
+        unanswered: graded.filter((x) => !answers.has(x.i)).length,
+      };
+    }
+
+    function attemptNote() {
+      const group = groupHistory(readStore().history).get(examKey);
+      const index = group ? group.attempts.findIndex((a) => a.attempt === currentAttempt) : -1;
+      if (index < 0) return "";
+      const me = group.attempts[index];
+      const prev = group.attempts[index - 1];
+      let note = "Đây là lần thi thứ " + me.attempt + " của bộ đề này.";
+      if (prev) {
+        const diff = me.percent - prev.percent;
+        note += " So với lần " + prev.attempt + ": " + (diff > 0 ? "tăng " + diff + "%" : diff < 0 ? "giảm " + -diff + "%" : "không đổi") + ".";
+      }
+      return note + (me.percent === group.best ? " 🏆 Đây là lần có điểm cao nhất!" : " Cao nhất: " + bestLabel(group) + ".");
+    }
+
+    function showResult({ correct, total, unanswered }) {
+      const percent = Math.round(correct * 100 / Math.max(total, 1));
+      $("#score").textContent = correct + "/" + total + " câu (" + percent + "%)";
+      $("#result-detail").textContent = "Đúng " + correct + " câu; chưa trả lời " + unanswered + " câu" +
+        (questions.length > total ? "; " + (questions.length - total) + " câu nghe chưa có đáp án không tính điểm." : ".");
+      $("#result-greeting").textContent = settings.studentName
+        ? "🎉 Chúc mừng " + settings.studentName + "! Bé đạt " + correct + "/" + total + " câu (" + percent + "%)."
+        : "🎉 Chúc mừng bé đã hoàn thành bài thi và đạt " + correct + "/" + total + " câu (" + percent + "%)!";
+      $("#result-note").textContent = attemptNote();
+      $("#result").hidden = false;
+    }
+
+    function finish() {
+      if (submitted) return;
+      if (timerId !== null) clearInterval(timerId);
+      timerId = null;
+      stopListenSpeech();
+      if ($("#confirm-dialog").open) $("#confirm-dialog").close();
+      const stats = computeStats();
+      submitted = true;
+      currentAttempt = recordResult(stats.correct, stats.total);
+      showResult(stats);
+      render();
+      renderHistory();
+      $("#result").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function retake() {
+      if (answers.size && !submitted && !confirm("Xóa bài đang làm và bắt đầu lại?")) return;
+      clearProgress();
+      startExam(currentData, examKey, true);
+      renderHistory();
+      playListenOnEntry(current);
+    }
+
+    async function loadIndex() {
+      try {
+        try {
+          const patchResponse = await fetch("answers.json", { cache: "no-store" });
+          if (!patchResponse.ok) throw new Error("HTTP " + patchResponse.status);
+          const patch = await patchResponse.json();
+          if (!patch || typeof patch !== "object" || Array.isArray(patch)) {
+            throw new Error("answers.json cần là một đối tượng JSON.");
+          }
+          answerPatch = patch;
+          answerPatchError = "";
+        } catch (error) {
+          answerPatchError = error.message;
+        }
+        const response = await fetch(BASE + "index.json");
+        if (!response.ok) throw new Error(response.status);
+        const index = await response.json();
+        indexedExamFiles = new Set(index.exams.map((exam) => exam.file));
+        const list = $("#exam-list");
+        index.exams.forEach((exam) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.addEventListener("click", async () => {
+            try {
+              const rawData = validate(await (await fetch(BASE + exam.file)).json());
+              const data = applyAnswerPatch(rawData);
+              imageBase = BASE;
+              if (!selectExam(data, exam.file)) return;
+              setStatus("Đã chọn " + (data.title || "bộ đề") + "." +
+                (answerPatchError ? " Không tải được answers.json: " + answerPatchError : ""), answerPatchError ? "error" : "success");
+            } catch (error) {
+              setStatus("Không đọc được " + exam.file + ": " + error.message, "error");
+            }
+          });
+          list.append(button);
+          examButtons.push({ button, exam });
+        });
+        renderHistory();
+        setStatus("Chọn một bộ đề để bắt đầu." +
+          (answerPatchError ? " Không tải được answers.json: " + answerPatchError : ""), answerPatchError ? "error" : "");
+      } catch (error) {
+        setStatus("Chưa tải được danh sách đề tự động (mở bằng file://?). Hãy chạy máy chủ cục bộ hoặc chọn file JSON thủ công.", "error");
+      }
+    }
+
+    $("#json-file").addEventListener("change", async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      $("#file-name").textContent = file.name;
+      try {
+        const rawData = validate(JSON.parse(await file.text()));
+        const data = indexedExamFiles.has(file.name) ? applyAnswerPatch(rawData) : rawData;
+        imageBase = BASE;
+        if (!selectExam(data, "file:" + file.name)) return;
+        setStatus("Đã chọn bộ đề " + file.name + ". Hình ảnh được lấy từ thư mục " + BASE + "images/.", "success");
+      } catch (error) {
+        $("#exam").style.display = "none";
+        setStatus("Không đọc được bộ đề: " + error.message, "error");
+      }
+    });
+    $("#restart").addEventListener("click", retake);
+    $("#retake").addEventListener("click", retake);
+    $("#begin-exam").addEventListener("click", beginSelectedExam);
+    $("#preview-retake").addEventListener("click", retakeSelectedExam);
+    $("#clear-history").addEventListener("click", () => {
+      if (!confirm("Xóa toàn bộ lịch sử điểm?")) return;
+      const store = readStore();
+      store.history = [];
+      writeStore(store);
+      renderHistory();
+    });
+    $("#prev").addEventListener("click", () => {
+      if (!requireAnswerBeforeLeaving()) return;
+      stopListenSpeech();
+      current -= 1;
+      render();
+      playListenOnEntry(current);
+    });
+    $("#next").addEventListener("click", () => {
+      if (!requireAnswerBeforeLeaving()) return;
+      stopListenSpeech();
+      const previous = current;
+      if (needsCheck(current)) {
+        checked.add(current);
+        beep(isCorrect(questions[current], current));
+      } else {
+        current += 1;
+      }
+      render();
+      if (current !== previous) playListenOnEntry(current);
+    });
+    const confirmDialog = $("#confirm-dialog");
+    function askSubmit() {
+      const open = questions.map((q, i) => ({ q, i })).filter((x) => isGraded(x.q) && !answers.has(x.i));
+      $("#confirm-summary").textContent = "Bạn đã trả lời " + answers.size + "/" + questions.length + " câu.";
+      const warning = $("#confirm-warning");
+      warning.hidden = open.length === 0;
+      if (open.length) {
+        const ids = open.map((x) => x.q.id ?? x.i + 1);
+        warning.textContent = "⚠ Còn " + open.length + " câu chưa trả lời: " + ids.slice(0, 15).join(", ") + (ids.length > 15 ? ", ..." : "") + ".";
+      }
+      confirmDialog.showModal();
+    }
+    $("#submit").addEventListener("click", askSubmit);
+    $("#confirm-cancel").addEventListener("click", () => confirmDialog.close());
+    confirmDialog.addEventListener("click", (event) => { if (event.target === confirmDialog) confirmDialog.close(); });
+    $("#confirm-ok").addEventListener("click", () => { confirmDialog.close(); finish(); });
+
+    const settingsDialog = $("#settings");
+    function syncSettingsForm() {
+      document.querySelectorAll('input[name="check-mode"]').forEach((input) => { input.checked = input.value === settings.checkMode; });
+      document.querySelectorAll('input[name="time-mode"]').forEach((input) => { input.checked = input.value === settings.timeMode; });
+      $("#sound-on").checked = settings.sound;
+      $("#custom-minutes").value = settings.customMinutes;
+      $("#student-name").value = settings.studentName;
+    }
+    $("#student-name").addEventListener("input", (event) => {
+      settings.studentName = event.target.value.trim().slice(0, 50);
+      saveSettings();
+      renderWelcome();
+    });
+    document.querySelectorAll('input[name="check-mode"]').forEach((input) => {
+      input.addEventListener("change", () => { settings.checkMode = input.value; saveSettings(); });
+    });
+    document.querySelectorAll('input[name="time-mode"]').forEach((input) => {
+      input.addEventListener("change", () => { settings.timeMode = input.value; saveSettings(); });
+    });
+    $("#custom-minutes").addEventListener("change", (event) => {
+      const value = Number(event.target.value);
+      settings.customMinutes = Number.isFinite(value) ? Math.min(300, Math.max(1, Math.round(value))) : 30;
+      event.target.value = settings.customMinutes;
+      settings.timeMode = "total";
+      saveSettings();
+      syncSettingsForm();
+    });
+    $("#sound-on").addEventListener("change", (event) => {
+      settings.sound = event.target.checked;
+      saveSettings();
+      beep(true);
+    });
+    $("#open-settings").addEventListener("click", () => { syncSettingsForm(); settingsDialog.showModal(); });
+    $("#close-settings").addEventListener("click", () => settingsDialog.close());
+    settingsDialog.addEventListener("click", (event) => { if (event.target === settingsDialog) settingsDialog.close(); });
+    syncSettingsForm();
+
+    renderWelcome();
+    renderHistory();
+    loadIndex();
+  </script>
+</body>
+</html>
