@@ -1,0 +1,1505 @@
+{
+  "title": "de thi ioe lop1 - Phần 4",
+  "questions": [
+    {
+      "id": 151,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "How many ___ ?",
+      "image": "images/q151.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "a bike"
+        },
+        {
+          "label": "B",
+          "text": "bikes"
+        },
+        {
+          "label": "C",
+          "text": "bike"
+        },
+        {
+          "label": "D",
+          "text": "the bike"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Có 2 chiếc xe đạp nên dùng số nhiều: bikes.",
+      "source_image": "images/q151_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 152,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q152.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "I like water."
+        },
+        {
+          "label": "B",
+          "text": "I like teddy bear."
+        },
+        {
+          "label": "C",
+          "text": "I like window."
+        },
+        {
+          "label": "D",
+          "text": "I like desk."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình giọt nước: \"I like water.\"",
+      "source_image": "images/q152_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 153,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "How many ___ ?",
+      "image": "images/q153.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "books"
+        },
+        {
+          "label": "B",
+          "text": "a book"
+        },
+        {
+          "label": "C",
+          "text": "the book"
+        },
+        {
+          "label": "D",
+          "text": "book"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Có nhiều quyển sách nên dùng số nhiều: books.",
+      "source_image": "images/q153_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 154,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the extra word.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "cat"
+        },
+        {
+          "label": "B",
+          "text": "duck"
+        },
+        {
+          "label": "C",
+          "text": "monkey"
+        },
+        {
+          "label": "D",
+          "text": "lemons"
+        }
+      ],
+      "answer": "D",
+      "explanation": "cat, duck, monkey là con vật; lemons là quả.",
+      "source_image": "images/q154_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 155,
+      "page": 16,
+      "type": "rearrange",
+      "audio_required": false,
+      "prompt": "Rearrange the words. That / a desk / is",
+      "image": null,
+      "options": [],
+      "answer": "That is a desk.",
+      "explanation": "Sắp xếp thành câu: \"That is a desk.\"",
+      "words": [
+        "That",
+        "is",
+        "a desk"
+      ],
+      "source_image": "images/q155_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 156,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I can ___ a dog.",
+      "image": "images/q156.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "sees"
+        },
+        {
+          "label": "B",
+          "text": "seen"
+        },
+        {
+          "label": "C",
+          "text": "see"
+        },
+        {
+          "label": "D",
+          "text": "seeing"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Sau \"can\" dùng động từ nguyên mẫu: see.",
+      "source_image": "images/q156_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 157,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "This is ___ cup.",
+      "image": "images/q157.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "have"
+        },
+        {
+          "label": "B",
+          "text": "an"
+        },
+        {
+          "label": "C",
+          "text": "are"
+        },
+        {
+          "label": "D",
+          "text": "a"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"cup\" bắt đầu bằng phụ âm nên dùng \"a\".",
+      "source_image": "images/q157_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 158,
+      "page": 16,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q158_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q158_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q158_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q158_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Noodles",
+      "explanation": null,
+      "source_image": "images/q158_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 159,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like HORSE?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "hand"
+        },
+        {
+          "label": "B",
+          "text": "milk"
+        },
+        {
+          "label": "C",
+          "text": "tiger"
+        },
+        {
+          "label": "D",
+          "text": "sun"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HORSE và hand cùng bắt đầu bằng âm /h/.",
+      "source_image": "images/q159_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 160,
+      "page": 16,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the extra word.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "lemons"
+        },
+        {
+          "label": "B",
+          "text": "nuts"
+        },
+        {
+          "label": "C",
+          "text": "cake"
+        },
+        {
+          "label": "D",
+          "text": "turtle"
+        }
+      ],
+      "answer": "D",
+      "explanation": "lemons, nuts, cake là đồ ăn; turtle là con vật.",
+      "source_image": "images/q160_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 161,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I ___ a car.",
+      "image": "images/q161.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "am"
+        },
+        {
+          "label": "B",
+          "text": "have"
+        },
+        {
+          "label": "C",
+          "text": "are"
+        },
+        {
+          "label": "D",
+          "text": "is"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Chủ ngữ \"I\" đi với \"have\".",
+      "source_image": "images/q161_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 162,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct spelling.",
+      "image": "images/q162.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "monkey"
+        },
+        {
+          "label": "B",
+          "text": "monkxy"
+        },
+        {
+          "label": "C",
+          "text": "mxnkey"
+        },
+        {
+          "label": "D",
+          "text": "monkeyy"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Con khỉ viết đúng chính tả: monkey.",
+      "source_image": "images/q162_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 163,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct spelling.",
+      "image": "images/q163.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "head"
+        },
+        {
+          "label": "B",
+          "text": "eadh"
+        },
+        {
+          "label": "C",
+          "text": "heaad"
+        },
+        {
+          "label": "D",
+          "text": "hhead"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Khuôn mặt/đầu viết đúng chính tả: head.",
+      "source_image": "images/q163_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 164,
+      "page": 17,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q164_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q164_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q164_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q164_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Pencil",
+      "explanation": null,
+      "source_image": "images/q164_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 165,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Complete the word. WIND___W",
+      "image": "images/q165.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "J"
+        },
+        {
+          "label": "B",
+          "text": "H"
+        },
+        {
+          "label": "C",
+          "text": "O"
+        },
+        {
+          "label": "D",
+          "text": "C"
+        }
+      ],
+      "answer": "C",
+      "explanation": "WIND + O + W = WINDOW (cửa sổ).",
+      "source_image": "images/q165_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 166,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the sentence.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "This is my duck."
+        },
+        {
+          "label": "B",
+          "text": "That is a duck."
+        },
+        {
+          "label": "C",
+          "text": "I can see a duck."
+        },
+        {
+          "label": "D",
+          "text": "There is a duck."
+        }
+      ],
+      "answer": "A",
+      "word_listent": "This is my duck.",
+      "explanation": null,
+      "source_image": "images/q166_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 167,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look ___ the car.",
+      "image": "images/q167.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "my"
+        },
+        {
+          "label": "B",
+          "text": "is"
+        },
+        {
+          "label": "C",
+          "text": "a"
+        },
+        {
+          "label": "D",
+          "text": "at"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"Look at the car.\" (Nhìn chiếc xe kìa).",
+      "source_image": "images/q167_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 168,
+      "page": 17,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "That is a bird.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q168_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q168_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q168_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q168_D.png"
+        }
+      ],
+      "answer": "A",
+      "explanation": "\"bird\" là con chim, ứng với hình A.",
+      "source_image": "images/q168_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 169,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Choose the correct sentence.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "How many lemons?"
+        },
+        {
+          "label": "B",
+          "text": "Many how lemons?"
+        },
+        {
+          "label": "C",
+          "text": "How much lemons?"
+        },
+        {
+          "label": "D",
+          "text": "How many a lemons?"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Câu đúng: \"How many lemons?\"",
+      "source_image": "images/q169_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 170,
+      "page": 17,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct sentence.",
+      "image": "images/q170.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a ruckt."
+        },
+        {
+          "label": "B",
+          "text": "This is a trucck."
+        },
+        {
+          "label": "C",
+          "text": "That is a truck."
+        },
+        {
+          "label": "D",
+          "text": "This is a truqk."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Hình xe tải: \"truck\" viết đúng ở C.",
+      "source_image": "images/q170_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 171,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Choose the correct sentence.",
+      "image": "images/q171.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "There is a red bird."
+        },
+        {
+          "label": "B",
+          "text": "There have a bird."
+        },
+        {
+          "label": "C",
+          "text": "There is is a bird."
+        },
+        {
+          "label": "D",
+          "text": "There are a bird."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Số ít dùng \"There is a red bird.\"",
+      "source_image": "images/q171_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 172,
+      "page": 18,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q172_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q172_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q172_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q172_D.png"
+        }
+      ],
+      "answer": "B",
+      "word_listent": "Nuts",
+      "explanation": null,
+      "source_image": "images/q172_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 173,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "The mouse is ___ the table.",
+      "image": "images/q173.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "near"
+        },
+        {
+          "label": "B",
+          "text": "in"
+        },
+        {
+          "label": "C",
+          "text": "on"
+        },
+        {
+          "label": "D",
+          "text": "under"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Con chuột ở dưới bàn nên dùng \"under\".",
+      "source_image": "images/q173_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 174,
+      "page": 18,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "I can see a window.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q174_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q174_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q174_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q174_D.png"
+        }
+      ],
+      "answer": "A",
+      "explanation": "\"window\" là cửa sổ, ứng với hình A.",
+      "source_image": "images/q174_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 175,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q175.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "These are locks."
+        },
+        {
+          "label": "B",
+          "text": "This is a door."
+        },
+        {
+          "label": "C",
+          "text": "This is a girl."
+        },
+        {
+          "label": "D",
+          "text": "This is a horse."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình hai ổ khóa: \"These are locks.\"",
+      "source_image": "images/q175_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 176,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Choose the correct sentence.",
+      "image": "images/q176.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "It's a red hat."
+        },
+        {
+          "label": "B",
+          "text": "It are a red hat."
+        },
+        {
+          "label": "C",
+          "text": "It's a red hat is."
+        },
+        {
+          "label": "D",
+          "text": "It's is a red hat."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Câu đúng: \"It's a red hat.\"",
+      "source_image": "images/q176_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 177,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "___ is my book.",
+      "image": "images/q177.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This"
+        },
+        {
+          "label": "B",
+          "text": "Have"
+        },
+        {
+          "label": "C",
+          "text": "He"
+        },
+        {
+          "label": "D",
+          "text": "I"
+        }
+      ],
+      "answer": "A",
+      "explanation": "\"This is my book.\"",
+      "source_image": "images/q177_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 178,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look. Choose the word.",
+      "image": "images/q178.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "lake"
+        },
+        {
+          "label": "B",
+          "text": "face"
+        },
+        {
+          "label": "C",
+          "text": "football"
+        },
+        {
+          "label": "D",
+          "text": "can"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình hồ nước: \"lake\".",
+      "source_image": "images/q178_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 179,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the sentence.",
+      "image": "images/q179.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "I have a bird."
+        },
+        {
+          "label": "B",
+          "text": "This is my bird."
+        },
+        {
+          "label": "C",
+          "text": "That is a bird."
+        },
+        {
+          "label": "D",
+          "text": "There is a bird."
+        }
+      ],
+      "answer": "A",
+      "word_listent": "I have a bird.",
+      "explanation": null,
+      "source_image": "images/q179_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 180,
+      "page": 18,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "The turtle is ___ the table.",
+      "image": "images/q180.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "on"
+        },
+        {
+          "label": "B",
+          "text": "under"
+        },
+        {
+          "label": "C",
+          "text": "near"
+        },
+        {
+          "label": "D",
+          "text": "in"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Con rùa ở dưới bàn nên dùng \"under\".",
+      "source_image": "images/q180_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 181,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the odd one out.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "I can see a truck."
+        },
+        {
+          "label": "B",
+          "text": "This is a bag."
+        },
+        {
+          "label": "C",
+          "text": "This is a book."
+        },
+        {
+          "label": "D",
+          "text": "This is a desk."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Ba câu \"This is a ...\" giống nhau; \"I can see ...\" khác dạng.",
+      "source_image": "images/q181_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 182,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "How many lemons?",
+      "image": "images/q182.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "one"
+        },
+        {
+          "label": "B",
+          "text": "eight"
+        },
+        {
+          "label": "C",
+          "text": "nine"
+        },
+        {
+          "label": "D",
+          "text": "three"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Có 1 quả chanh: one.",
+      "source_image": "images/q182_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 183,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the odd one out.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a pencil."
+        },
+        {
+          "label": "B",
+          "text": "These are nuts."
+        },
+        {
+          "label": "C",
+          "text": "This is a desk."
+        },
+        {
+          "label": "D",
+          "text": "This is a bell."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Các câu còn lại là số ít; \"These are nuts\" là số nhiều.",
+      "source_image": "images/q183_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 184,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q184.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is my football."
+        },
+        {
+          "label": "B",
+          "text": "This is my duck."
+        },
+        {
+          "label": "C",
+          "text": "Look! This is my hat."
+        },
+        {
+          "label": "D",
+          "text": "This is my fish."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Hình cái mũ: \"Look! This is my hat.\"",
+      "source_image": "images/q184_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 185,
+      "page": 19,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q185_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q185_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q185_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q185_D.png"
+        }
+      ],
+      "answer": "A",
+      "word_listent": "Bike",
+      "explanation": null,
+      "source_image": "images/q185_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 186,
+      "page": 19,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "This is a monkey.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q186_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q186_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q186_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q186_D.png"
+        }
+      ],
+      "answer": "B",
+      "explanation": "\"monkey\" là con khỉ, ứng với hình B.",
+      "source_image": "images/q186_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 187,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q187.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "I have a lemons."
+        },
+        {
+          "label": "B",
+          "text": "I have a dog."
+        },
+        {
+          "label": "C",
+          "text": "I have a clocks."
+        },
+        {
+          "label": "D",
+          "text": "I have a duck."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Hình con chó: \"I have a dog.\"",
+      "source_image": "images/q187_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 188,
+      "page": 19,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "I can see nuts.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q188_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q188_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q188_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q188_D.png"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"nuts\" là hạt đậu phộng, ứng với hình D.",
+      "source_image": "images/q188_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 189,
+      "page": 19,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q189_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q189_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q189_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q189_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Sun",
+      "explanation": null,
+      "source_image": "images/q189_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 190,
+      "page": 19,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I ___ a pencil.",
+      "image": "images/q190.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "am"
+        },
+        {
+          "label": "B",
+          "text": "is"
+        },
+        {
+          "label": "C",
+          "text": "has"
+        },
+        {
+          "label": "D",
+          "text": "have"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Chủ ngữ \"I\" đi với \"have\".",
+      "source_image": "images/q190_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 191,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "How ___ dogs?",
+      "image": "images/q191.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "is"
+        },
+        {
+          "label": "B",
+          "text": "am"
+        },
+        {
+          "label": "C",
+          "text": "my"
+        },
+        {
+          "label": "D",
+          "text": "many"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"How many dogs?\" (Có bao nhiêu con chó?).",
+      "source_image": "images/q191_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 192,
+      "page": 20,
+      "type": "rearrange",
+      "audio_required": false,
+      "prompt": "Rearrange the words. a leaf / have / I",
+      "image": null,
+      "options": [],
+      "answer": "I have a leaf.",
+      "explanation": "Sắp xếp thành câu: \"I have a leaf.\"",
+      "words": [
+        "a leaf",
+        "have",
+        "I"
+      ],
+      "source_image": "images/q192_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 193,
+      "page": 20,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "This is a teddy bear.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q193_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q193_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q193_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q193_D.png"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"teddy bear\" là gấu bông, ứng với hình D.",
+      "source_image": "images/q193_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 194,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I ___ a mango.",
+      "image": "images/q194.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "am"
+        },
+        {
+          "label": "B",
+          "text": "has"
+        },
+        {
+          "label": "C",
+          "text": "are"
+        },
+        {
+          "label": "D",
+          "text": "have"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Chủ ngữ \"I\" đi với \"have\".",
+      "source_image": "images/q194_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 195,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "How many goats?",
+      "image": "images/q195.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "seven"
+        },
+        {
+          "label": "B",
+          "text": "seven"
+        },
+        {
+          "label": "C",
+          "text": "one"
+        },
+        {
+          "label": "D",
+          "text": "two"
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "Có 7 con dê: seven. Đề in A và B trùng nhau nên chấp nhận cả hai.",
+      "source_image": "images/q195_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 196,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct sentence.",
+      "image": "images/q196.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "These are chipss."
+        },
+        {
+          "label": "B",
+          "text": "These are chzps."
+        },
+        {
+          "label": "C",
+          "text": "These are cihps."
+        },
+        {
+          "label": "D",
+          "text": "These are chips."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Hình khoai tây chiên: \"chips\" viết đúng ở D.",
+      "source_image": "images/q196_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 197,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q197.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is my garden."
+        },
+        {
+          "label": "B",
+          "text": "This is my desk."
+        },
+        {
+          "label": "C",
+          "text": "This is my window."
+        },
+        {
+          "label": "D",
+          "text": "This is my bag."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình những bông hoa: \"garden\" (khu vườn).",
+      "source_image": "images/q197_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 198,
+      "page": 20,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "I can see a door.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q198_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q198_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q198_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q198_D.png"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"door\" là cái cửa, ứng với hình D.",
+      "source_image": "images/q198_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 199,
+      "page": 20,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "I can see a monkey.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q199_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q199_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q199_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q199_D.png"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"monkey\" là con khỉ, ứng với hình D.",
+      "source_image": "images/q199_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 200,
+      "page": 20,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q200.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "He can run."
+        },
+        {
+          "label": "B",
+          "text": "This is a football."
+        },
+        {
+          "label": "C",
+          "text": "This is a door."
+        },
+        {
+          "label": "D",
+          "text": "This is a chicken."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình cậu bé đang chạy: \"He can run.\"",
+      "source_image": "images/q200_full.png",
+      "needs_review": []
+    }
+  ]
+}

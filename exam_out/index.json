@@ -1,0 +1,25 @@
+{
+  "title": "de thi ioe lop1",
+  "exams": [
+    {
+      "file": "exam_01.json",
+      "title": "de thi ioe lop1 - Phần 1",
+      "count": 50
+    },
+    {
+      "file": "exam_02.json",
+      "title": "de thi ioe lop1 - Phần 2",
+      "count": 50
+    },
+    {
+      "file": "exam_03.json",
+      "title": "de thi ioe lop1 - Phần 3",
+      "count": 50
+    },
+    {
+      "file": "exam_04.json",
+      "title": "de thi ioe lop1 - Phần 4",
+      "count": 50
+    }
+  ]
+}

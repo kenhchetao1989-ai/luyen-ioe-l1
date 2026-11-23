@@ -1,0 +1,1502 @@
+{
+  "title": "de thi ioe lop1 - Phần 1",
+  "questions": [
+    {
+      "id": 1,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "This ___ my top.",
+      "image": "images/q001.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "are"
+        },
+        {
+          "label": "B",
+          "text": "is"
+        },
+        {
+          "label": "C",
+          "text": "am"
+        },
+        {
+          "label": "D",
+          "text": "have"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Chủ ngữ \"This\" đi với động từ \"is\".",
+      "source_image": "images/q001_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 2,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Find the extra letter. DOBOR",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "B"
+        },
+        {
+          "label": "B",
+          "text": "O"
+        },
+        {
+          "label": "C",
+          "text": "D"
+        },
+        {
+          "label": "D",
+          "text": "R"
+        }
+      ],
+      "answer": "A",
+      "explanation": "DOBOR bỏ chữ B thành DOOR (cửa).",
+      "source_image": "images/q002_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 3,
+      "page": 1,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "Look! This is a can.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q003_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q003_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q003_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q003_D.png"
+        }
+      ],
+      "answer": "C",
+      "explanation": "\"can\" là cái lon, ứng với hình C.",
+      "source_image": "images/q003_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 4,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Find the extra letter. MOUSXE",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "U"
+        },
+        {
+          "label": "B",
+          "text": "E"
+        },
+        {
+          "label": "C",
+          "text": "X"
+        },
+        {
+          "label": "D",
+          "text": "M"
+        }
+      ],
+      "answer": "C",
+      "explanation": "MOUSXE bỏ chữ X thành MOUSE (con chuột).",
+      "source_image": "images/q004_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 5,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the sentence.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "I can see a red car."
+        },
+        {
+          "label": "B",
+          "text": "There is a red car."
+        },
+        {
+          "label": "C",
+          "text": "This is my red car."
+        },
+        {
+          "label": "D",
+          "text": "I have a red car."
+        }
+      ],
+      "answer": "A",
+      "word_listent": "I can see a red car.",
+      "explanation": null,
+      "source_image": "images/q005_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 6,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct sentence.",
+      "image": "images/q006.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a ckae."
+        },
+        {
+          "label": "B",
+          "text": "This is a cakx."
+        },
+        {
+          "label": "C",
+          "text": "This is a xake."
+        },
+        {
+          "label": "D",
+          "text": "This is a cake."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Hình cái bánh: cake. Chỉ D viết đúng chính tả.",
+      "source_image": "images/q006_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 7,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Complete the word. BI___",
+      "image": "images/q007.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "FV"
+        },
+        {
+          "label": "B",
+          "text": "LA"
+        },
+        {
+          "label": "C",
+          "text": "RD"
+        },
+        {
+          "label": "D",
+          "text": "MW"
+        }
+      ],
+      "answer": "C",
+      "explanation": "BI + RD = BIRD (con chim).",
+      "source_image": "images/q007_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 8,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct sentence.",
+      "image": "images/q008.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "These are gwocks."
+        },
+        {
+          "label": "B",
+          "text": "These are nrocks."
+        },
+        {
+          "label": "C",
+          "text": "These are clocks."
+        },
+        {
+          "label": "D",
+          "text": "These are dhocks."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Hình hai cái đồng hồ: \"These are clocks\" viết đúng.",
+      "source_image": "images/q008_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 9,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I ___ see a car.",
+      "image": "images/q009.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "can"
+        },
+        {
+          "label": "B",
+          "text": "my"
+        },
+        {
+          "label": "C",
+          "text": "am"
+        },
+        {
+          "label": "D",
+          "text": "is"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Cấu trúc \"I can see ...\" (Tôi có thể thấy ...).",
+      "source_image": "images/q009_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 10,
+      "page": 1,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "The book is ___ the box.",
+      "image": "images/q010.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "near"
+        },
+        {
+          "label": "B",
+          "text": "on"
+        },
+        {
+          "label": "C",
+          "text": "under"
+        },
+        {
+          "label": "D",
+          "text": "in"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Quyển sách ở trong hộp nên dùng \"in\".",
+      "source_image": "images/q010_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 11,
+      "page": 2,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "This is a book.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q011_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q011_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q011_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q011_D.png"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"book\" là quyển sách, ứng với hình D.",
+      "source_image": "images/q011_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 12,
+      "page": 2,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q012.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a father."
+        },
+        {
+          "label": "B",
+          "text": "This is a top."
+        },
+        {
+          "label": "C",
+          "text": "This is a bell."
+        },
+        {
+          "label": "D",
+          "text": "This is a mother."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình người cha và con trai: \"father\" là bố.",
+      "source_image": "images/q012_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 13,
+      "page": 2,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q013_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q013_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q013_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q013_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Cat",
+      "explanation": null,
+      "source_image": "images/q013_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 14,
+      "page": 2,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q014_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q014_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q014_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q014_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Water",
+      "explanation": null,
+      "source_image": "images/q014_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 15,
+      "page": 2,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the extra word.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "desk"
+        },
+        {
+          "label": "B",
+          "text": "tiger"
+        },
+        {
+          "label": "C",
+          "text": "bag"
+        },
+        {
+          "label": "D",
+          "text": "book"
+        }
+      ],
+      "answer": "B",
+      "explanation": "tiger là con vật, các từ còn lại là đồ vật.",
+      "source_image": "images/q015_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 16,
+      "page": 2,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q016_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q016_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q016_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q016_D.png"
+        }
+      ],
+      "answer": "C",
+      "word_listent": "Fish",
+      "explanation": null,
+      "source_image": "images/q016_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 17,
+      "page": 2,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like TOP?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "truck"
+        },
+        {
+          "label": "B",
+          "text": "hat"
+        },
+        {
+          "label": "C",
+          "text": "pen"
+        },
+        {
+          "label": "D",
+          "text": "noodles"
+        }
+      ],
+      "answer": "A",
+      "explanation": "TOP và truck cùng bắt đầu bằng âm /t/.",
+      "source_image": "images/q017_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 18,
+      "page": 2,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct sentence.",
+      "image": "images/q018.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is an urtlet."
+        },
+        {
+          "label": "B",
+          "text": "This is a turtlee."
+        },
+        {
+          "label": "C",
+          "text": "That is a turtle."
+        },
+        {
+          "label": "D",
+          "text": "This is a tvrtle."
+        }
+      ],
+      "answer": "C",
+      "explanation": "Hình con rùa: \"turtle\". Các đáp án khác sai chính tả.",
+      "source_image": "images/q018_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 19,
+      "page": 2,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Pick the extra word.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "bag"
+        },
+        {
+          "label": "B",
+          "text": "bike"
+        },
+        {
+          "label": "C",
+          "text": "bus"
+        },
+        {
+          "label": "D",
+          "text": "truck"
+        }
+      ],
+      "answer": "A",
+      "explanation": "bike, bus, truck là phương tiện; bag là cái túi.",
+      "source_image": "images/q019_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 20,
+      "page": 2,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "This is my leaf.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q020_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q020_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q020_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q020_D.png"
+        }
+      ],
+      "answer": "B",
+      "explanation": "\"leaf\" là chiếc lá, ứng với hình B.",
+      "source_image": "images/q020_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 21,
+      "page": 3,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q021_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q021_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q021_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q021_D.png"
+        }
+      ],
+      "answer": "D",
+      "word_listent": "Turtle",
+      "explanation": null,
+      "source_image": "images/q021_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 22,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look. Choose the word.",
+      "image": "images/q022.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "top"
+        },
+        {
+          "label": "B",
+          "text": "bike"
+        },
+        {
+          "label": "C",
+          "text": "noodles"
+        },
+        {
+          "label": "D",
+          "text": "window"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình con quay: \"top\".",
+      "source_image": "images/q022_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 23,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Find the extra letter. NORODLES",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "S"
+        },
+        {
+          "label": "B",
+          "text": "R"
+        },
+        {
+          "label": "C",
+          "text": "E"
+        },
+        {
+          "label": "D",
+          "text": "L"
+        }
+      ],
+      "answer": "B",
+      "explanation": "NORODLES bỏ chữ R thành NOODLES (mì).",
+      "source_image": "images/q023_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 24,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Choose the correct sentence.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "Point to your face."
+        },
+        {
+          "label": "B",
+          "text": "Point your to face."
+        },
+        {
+          "label": "C",
+          "text": "Point to you face."
+        },
+        {
+          "label": "D",
+          "text": "Point is your face."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Câu đúng: \"Point to your face.\" (Chỉ vào mặt bạn).",
+      "source_image": "images/q024_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 25,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q025.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a desk."
+        },
+        {
+          "label": "B",
+          "text": "These are mops."
+        },
+        {
+          "label": "C",
+          "text": "This is a sun."
+        },
+        {
+          "label": "D",
+          "text": "This is a mango."
+        }
+      ],
+      "answer": "D",
+      "explanation": "Hình quả xoài: \"mango\".",
+      "source_image": "images/q025_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 26,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "The goat is ___ the table.",
+      "image": "images/q026.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "near"
+        },
+        {
+          "label": "B",
+          "text": "in"
+        },
+        {
+          "label": "C",
+          "text": "under"
+        },
+        {
+          "label": "D",
+          "text": "on"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Con dê đứng dưới bàn nên dùng \"under\".",
+      "source_image": "images/q026_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 27,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like CAN?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "mother"
+        },
+        {
+          "label": "B",
+          "text": "bird"
+        },
+        {
+          "label": "C",
+          "text": "book"
+        },
+        {
+          "label": "D",
+          "text": "Car"
+        }
+      ],
+      "answer": "D",
+      "explanation": "CAN và car cùng bắt đầu bằng âm /k/.",
+      "source_image": "images/q027_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 28,
+      "page": 3,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "Red.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q028_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q028_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q028_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q028_D.png"
+        }
+      ],
+      "answer": "C",
+      "explanation": "\"Red\" là màu đỏ, ứng với hình C.",
+      "source_image": "images/q028_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 29,
+      "page": 3,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Choose the correct sentence.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "This my is ball."
+        },
+        {
+          "label": "B",
+          "text": "This is my ball."
+        },
+        {
+          "label": "C",
+          "text": "This are my ball."
+        },
+        {
+          "label": "D",
+          "text": "This have my ball."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Câu đúng ngữ pháp: \"This is my ball.\"",
+      "source_image": "images/q029_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 30,
+      "page": 3,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q030_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q030_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q030_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q030_D.png"
+        }
+      ],
+      "answer": "D",
+      "word_listent": "Pen",
+      "explanation": null,
+      "source_image": "images/q030_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 31,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like CAKE?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "door"
+        },
+        {
+          "label": "B",
+          "text": "can"
+        },
+        {
+          "label": "C",
+          "text": "duck"
+        },
+        {
+          "label": "D",
+          "text": "head"
+        }
+      ],
+      "answer": "B",
+      "explanation": "CAKE và can cùng bắt đầu bằng âm /k/.",
+      "source_image": "images/q031_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 32,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "The book is ___ the desk.",
+      "image": "images/q032.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "in"
+        },
+        {
+          "label": "B",
+          "text": "under"
+        },
+        {
+          "label": "C",
+          "text": "near"
+        },
+        {
+          "label": "D",
+          "text": "on"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Quyển sách nằm dưới bàn nên dùng \"under\".",
+      "source_image": "images/q032_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 33,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look. Choose the word.",
+      "image": "images/q033.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "apple"
+        },
+        {
+          "label": "B",
+          "text": "father"
+        },
+        {
+          "label": "C",
+          "text": "goat"
+        },
+        {
+          "label": "D",
+          "text": "window"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Hình con dê: \"goat\".",
+      "source_image": "images/q033_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 34,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q034.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "I can see a cat."
+        },
+        {
+          "label": "B",
+          "text": "This is a girl."
+        },
+        {
+          "label": "C",
+          "text": "This is a bus."
+        },
+        {
+          "label": "D",
+          "text": "This is a teddy bear."
+        }
+      ],
+      "answer": "A",
+      "explanation": "Hình mặt mèo: \"I can see a cat.\"",
+      "source_image": "images/q034_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 35,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Find the extra letter. FACEZ",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "C"
+        },
+        {
+          "label": "B",
+          "text": "A"
+        },
+        {
+          "label": "C",
+          "text": "E"
+        },
+        {
+          "label": "D",
+          "text": "Z"
+        }
+      ],
+      "answer": "D",
+      "explanation": "FACEZ bỏ chữ Z thành FACE (khuôn mặt).",
+      "source_image": "images/q035_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 36,
+      "page": 4,
+      "type": "rearrange",
+      "audio_required": false,
+      "prompt": "Rearrange the words. at / the bus / Look",
+      "image": null,
+      "options": [],
+      "answer": "Look at the bus.",
+      "explanation": "Sắp xếp thành câu: \"Look at the bus.\" (Nhìn xe buýt kìa).",
+      "words": [
+        "Look",
+        "at",
+        "the bus"
+      ],
+      "source_image": "images/q036_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 37,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like DESK?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "door"
+        },
+        {
+          "label": "B",
+          "text": "bike"
+        },
+        {
+          "label": "C",
+          "text": "cat"
+        },
+        {
+          "label": "D",
+          "text": "monkey"
+        }
+      ],
+      "answer": "A",
+      "explanation": "DESK và door cùng bắt đầu bằng âm /d/.",
+      "source_image": "images/q037_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 38,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Complete the word. GAR___N",
+      "image": "images/q038.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "CJ"
+        },
+        {
+          "label": "B",
+          "text": "DE"
+        },
+        {
+          "label": "C",
+          "text": "WJ"
+        },
+        {
+          "label": "D",
+          "text": "RI"
+        }
+      ],
+      "answer": "B",
+      "explanation": "GAR + DE + N = GARDEN (khu vườn).",
+      "source_image": "images/q038_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 39,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I have ___ bike.",
+      "image": "images/q039.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "an"
+        },
+        {
+          "label": "B",
+          "text": "a"
+        },
+        {
+          "label": "C",
+          "text": "have"
+        },
+        {
+          "label": "D",
+          "text": "are"
+        }
+      ],
+      "answer": "B",
+      "explanation": "\"bike\" bắt đầu bằng phụ âm nên dùng \"a\".",
+      "source_image": "images/q039_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 40,
+      "page": 4,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which word begins like PEN?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "nuts"
+        },
+        {
+          "label": "B",
+          "text": "cake"
+        },
+        {
+          "label": "C",
+          "text": "pots"
+        },
+        {
+          "label": "D",
+          "text": "cup"
+        }
+      ],
+      "answer": "C",
+      "explanation": "PEN và pots cùng bắt đầu bằng âm /p/.",
+      "source_image": "images/q040_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 41,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q041.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a bag."
+        },
+        {
+          "label": "B",
+          "text": "He can wash."
+        },
+        {
+          "label": "C",
+          "text": "These are locks."
+        },
+        {
+          "label": "D",
+          "text": "This is an apple."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Hình cậu bé rửa tay: \"He can wash.\"",
+      "source_image": "images/q041_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 42,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Find the extra letter. GIRQL",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "Q"
+        },
+        {
+          "label": "B",
+          "text": "G"
+        },
+        {
+          "label": "C",
+          "text": "L"
+        },
+        {
+          "label": "D",
+          "text": "I"
+        }
+      ],
+      "answer": "A",
+      "explanation": "GIRQL bỏ chữ Q thành GIRL (cô gái).",
+      "source_image": "images/q042_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 43,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "I have ___ leaf.",
+      "image": "images/q043.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "have"
+        },
+        {
+          "label": "B",
+          "text": "are"
+        },
+        {
+          "label": "C",
+          "text": "an"
+        },
+        {
+          "label": "D",
+          "text": "a"
+        }
+      ],
+      "answer": "D",
+      "explanation": "\"leaf\" bắt đầu bằng phụ âm nên dùng \"a\".",
+      "source_image": "images/q043_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 44,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Complete the word. F___T",
+      "image": "images/q044.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "WR"
+        },
+        {
+          "label": "B",
+          "text": "JT"
+        },
+        {
+          "label": "C",
+          "text": "OO"
+        },
+        {
+          "label": "D",
+          "text": "IU"
+        }
+      ],
+      "answer": "C",
+      "explanation": "F + OO + T = FOOT (bàn chân).",
+      "source_image": "images/q044_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 45,
+      "page": 5,
+      "type": "image_choice",
+      "audio_required": true,
+      "prompt": "Listen. Choose the picture.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q045_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q045_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q045_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q045_D.png"
+        }
+      ],
+      "answer": "D",
+      "word_listent": "Door",
+      "explanation": null,
+      "source_image": "images/q045_full.png",
+      "needs_review": [
+        "audio_required"
+      ]
+    },
+    {
+      "id": 46,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the correct spelling.",
+      "image": "images/q046.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "lleaf"
+        },
+        {
+          "label": "B",
+          "text": "leaf"
+        },
+        {
+          "label": "C",
+          "text": "leaff"
+        },
+        {
+          "label": "D",
+          "text": "lexf"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Chiếc lá viết đúng là \"leaf\".",
+      "source_image": "images/q046_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 47,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Which sentence contains a word in CAPITAL LETTERS that begins like CLOCKS?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "text": "This is a CAT."
+        },
+        {
+          "label": "B",
+          "text": "This is a MOTHER."
+        },
+        {
+          "label": "C",
+          "text": "This is a SUN."
+        },
+        {
+          "label": "D",
+          "text": "This is a BALL."
+        }
+      ],
+      "answer": "A",
+      "explanation": "CLOCKS bắt đầu bằng âm /k/, giống CAT.",
+      "source_image": "images/q047_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 48,
+      "page": 5,
+      "type": "image_choice",
+      "audio_required": false,
+      "prompt": "Horse.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "image": "images/q048_A.png"
+        },
+        {
+          "label": "B",
+          "image": "images/q048_B.png"
+        },
+        {
+          "label": "C",
+          "image": "images/q048_C.png"
+        },
+        {
+          "label": "D",
+          "image": "images/q048_D.png"
+        }
+      ],
+      "answer": "C",
+      "explanation": "\"Horse\" là con ngựa, ứng với hình C.",
+      "source_image": "images/q048_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 49,
+      "page": 5,
+      "type": "multiple_choice",
+      "audio_required": false,
+      "prompt": "Look at the picture. Choose the sentence that matches the picture.",
+      "image": "images/q049.png",
+      "options": [
+        {
+          "label": "A",
+          "text": "That is a pen."
+        },
+        {
+          "label": "B",
+          "text": "That is a garden."
+        },
+        {
+          "label": "C",
+          "text": "That is a can."
+        },
+        {
+          "label": "D",
+          "text": "That is a fish."
+        }
+      ],
+      "answer": "B",
+      "explanation": "Hình những bông hoa trên cỏ: \"garden\" (khu vườn).",
+      "source_image": "images/q049_full.png",
+      "needs_review": []
+    },
+    {
+      "id": 50,
+      "page": 5,
+      "type": "rearrange",
+      "audio_required": false,
+      "prompt": "Rearrange the words. is / a monkey / That",
+      "image": null,
+      "options": [],
+      "answer": "That is a monkey.",
+      "explanation": "Sắp xếp thành câu: \"That is a monkey.\"",
+      "words": [
+        "That",
+        "is",
+        "a monkey"
+      ],
+      "source_image": "images/q050_full.png",
+      "needs_review": []
+    }
+  ]
+}
