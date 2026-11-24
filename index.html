@@ -142,8 +142,7 @@
   </dialog>
   <main>
     <section class="panel" aria-labelledby="load-heading">
-      <h2 id="load-heading">Chọn bộ đề</h2>
-      <p class="muted">Bộ đề được đọc từ thư mục <code>exam_out/</code> (do <code>pdf_to_exam.py</code> tạo ra); đáp án và nội dung <code>word_listent</code> được áp dụng từ <code>answers.json</code>. Hãy mở trang qua máy chủ cục bộ: <code>py -m http.server 8000</code> rồi vào <code>http://localhost:8000/</code>.</p>
+      <h2 id="load-heading">Chọn đề thi</h2>
       <div id="exam-list"></div>
       <div class="row" style="margin-top:.8rem; justify-content:flex-start">
         <label class="file-button secondary" for="json-file" style="color:#263248;background:#fff;border:1px solid #cbd4e2">Hoặc chọn file exam_XX.json</label>
@@ -357,6 +356,7 @@
         ? "Vui lòng sắp xếp đủ các từ trước khi sang câu khác."
         : "Vui lòng chọn một đáp án trước khi sang câu khác.";
       $("#answer-required").hidden = false;
+      beep(false);
       $("#answer-required").scrollIntoView({ behavior: "smooth", block: "nearest" });
       return false;
     }
@@ -936,7 +936,10 @@
             }
           });
           list.append(button);
-          examButtons.push({ button, exam });
+          examButtons.push({
+            button,
+            exam: { ...exam, title: exam.title.replace(/^de thi ioe lop1/i, "IOE lớp 1") },
+          });
         });
         renderHistory();
         setStatus("Chọn một bộ đề để bắt đầu." +
