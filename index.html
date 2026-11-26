@@ -90,6 +90,237 @@
     #result-note { margin: .2rem 0 .8rem; font-weight: 600; }
     #restart { min-height: 34px; padding: .25rem .7rem; }
     @media (max-width: 560px) { main { width: min(100% - 1rem, 980px); } .panel { padding: .9rem; } #prompt { font-size: 1.15rem; } }
+
+    :root {
+      --ioe-navy: #123d77;
+      --ioe-blue: #1677c8;
+      --ioe-cyan: #29abe2;
+      --ioe-gold: #ffca3a;
+      color: #23334d;
+      background: #eef4fb;
+      font-family: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+    }
+    body {
+      background:
+        radial-gradient(ellipse at 12% 18%, #dceeff 0, transparent 34rem),
+        #eef4fb;
+    }
+    header {
+      padding: .7rem 1rem;
+      border-bottom: 4px solid var(--ioe-gold);
+      background: linear-gradient(110deg, #07518e, #123d77 72%, #0c2b60);
+      box-shadow: 0 5px 16px #173a7026;
+    }
+    .bar { width: min(100%, 1280px); }
+    header h1 {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+    }
+    header h1::before {
+      content: "IOE";
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 2px solid var(--ioe-gold);
+      border-radius: 14px;
+      color: var(--ioe-navy);
+      background: #fff;
+      box-shadow: 0 3px 0 #d9a926;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+    #open-settings {
+      border: 1px solid #ffffff70;
+      border-radius: 10px;
+      background: #ffffff1c;
+    }
+    main { width: min(100% - 2rem, 1280px); margin: 1.25rem auto; }
+    .panel {
+      margin-bottom: 1.1rem;
+      padding: 1.25rem;
+      border: 1px solid #dce5f1;
+      border-radius: 16px;
+      box-shadow: 0 7px 22px #24457512;
+    }
+    h2 { color: var(--ioe-navy); }
+    #exam-list { gap: .65rem; }
+    #exam-list button {
+      border: 1px solid #d8e4f3;
+      border-bottom: 4px solid #c8d8e9;
+      border-radius: 12px;
+      color: var(--ioe-navy);
+      background: #f8fbff;
+    }
+    #exam-list button:hover { border-color: var(--ioe-cyan); background: #effaff; }
+    #status { font-weight: 600; }
+    #exam-top-panel { padding: .85rem 1rem .75rem; }
+    #exam-title { color: var(--ioe-navy); }
+    #timer {
+      display: inline-block;
+      padding: .4rem .7rem;
+      border: 1px solid #254d84;
+      border-radius: 9px;
+      color: #ffdc61;
+      background: #102b58;
+      letter-spacing: .04em;
+    }
+    #timer.warning { color: #fff; background: #b92b32; }
+    #restart { margin-left: .35rem; }
+    #nav {
+      flex-wrap: nowrap;
+      max-height: none;
+      margin-top: .75rem;
+      padding: .2rem .15rem .6rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-color: #8ebdf4 #edf5ff;
+      scrollbar-width: thin;
+    }
+    #nav button {
+      flex: 0 0 48px;
+      min-height: 46px;
+      border: 1px solid #d9e1eb;
+      border-bottom: 4px solid #cbd4df;
+      border-radius: 11px;
+      color: #63748b;
+      background: #fff;
+      font-weight: 800;
+      transition: transform .15s, background-color .15s, border-color .15s;
+    }
+    #nav button:hover { transform: translateY(-2px); }
+    #nav button.answered { border-color: #85bde0; color: #16598c; background: #eaf7ff; }
+    #nav button.current {
+      outline: 0;
+      border-color: #d58408;
+      border-bottom-color: #a45b06;
+      color: #fff;
+      background: #f39b0b;
+      transform: translateY(-2px);
+    }
+    #nav button.correct { border-color: #10a878; border-bottom-color: #087c5a; color: #fff; background: #12ae7b; }
+    #nav button.incorrect { border-color: #d43b43; border-bottom-color: #a6212a; color: #fff; background: #e84750; }
+    #nav button.ungraded { border-style: dashed; }
+    #question-panel {
+      padding: 0 1.5rem 1.25rem;
+      overflow: visible;
+      scroll-margin-top: 12px;
+    }
+    #question-panel > .row:first-of-type {
+      margin: 0 -1.5rem 1rem;
+      padding: .9rem 1.5rem;
+      border-bottom: 1px solid #dbe6f8;
+      background: #edf3ff;
+    }
+    #q-number { color: var(--ioe-navy); font-size: 1.4rem; font-weight: 800; }
+    #q-hint { padding: .3rem .6rem; border-radius: 999px; background: #fff; }
+    #prompt {
+      margin: 1.1rem auto 1.4rem;
+      color: #202c41;
+      text-align: center;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+    }
+    #stimulus { max-width: min(100%, 600px); max-height: 360px; margin: 0 auto 1.2rem; }
+    #audio-note {
+      border: 1px solid #cce8f8;
+      border-radius: 14px;
+      color: #24599b;
+      background: #f1f9ff;
+      text-align: center;
+    }
+    #audio-note button { border: 1px solid #bdd5f3; color: #245db0; background: #fff; }
+    #options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .option {
+      min-height: 68px;
+      padding: .9rem 1rem;
+      border: 1px solid #dce3ed;
+      border-bottom: 5px solid #e6eaf0;
+      border-radius: 14px;
+      color: #39475d;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: border-color .15s, background-color .15s, transform .15s;
+    }
+    .option:hover { border-color: #8dd4f0; transform: translateY(-1px); }
+    .option input { width: 20px; height: 20px; flex: 0 0 auto; accent-color: var(--ioe-blue); }
+    .option:has(input:checked) { border-color: var(--ioe-cyan); border-bottom-color: #1687bb; color: #28436e; background: #effaff; }
+    .option.correct { border-color: #28ad7b; border-bottom-color: #159166; color: #146947; background: #eafaf2; }
+    .option.incorrect { border-color: #df696c; border-bottom-color: #bf4247; color: #9e3036; background: #fff0ef; }
+    #built, #pool {
+      justify-content: center;
+      align-items: center;
+      min-height: 74px;
+      padding: .8rem;
+      border: 2px dashed #cbd6e5;
+      border-radius: 14px;
+      background: #f8fafd;
+    }
+    #pool { border-style: solid; background: #fffaf0; }
+    #rearrange .chip {
+      min-height: 52px;
+      padding: .55rem 1rem;
+      border: 1px solid #d38b19;
+      border-bottom: 5px solid #b66c0c;
+      border-radius: 11px;
+      color: #70400d;
+      background: linear-gradient(#ffe49a, #ffb82e);
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    #question-panel > .row:last-of-type {
+      position: sticky;
+      bottom: 0;
+      z-index: 4;
+      margin-right: -1.5rem;
+      margin-bottom: -1.25rem;
+      margin-left: -1.5rem;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid #dce5f1;
+      background: #fffffff0;
+      box-shadow: 0 -6px 16px #173a7014;
+      backdrop-filter: blur(8px);
+      justify-content: center;
+    }
+    #prev, #next, #submit { min-height: 50px; border-radius: 12px; }
+    #prev { color: #263248; background: #fff; border: 1px solid #cbd4e2; }
+    #next { background: var(--ioe-blue); }
+    #submit { background: #df3942; }
+    #feedback { border: 1px solid #dce5f1; border-radius: 14px; }
+    #feedback.good { border-color: #bcebd2; }
+    #feedback.bad { border-color: #f1c8c6; }
+    #result { border-color: #bcebd2; background: #f4fff8; }
+    #score { color: #16704f; font-size: 1.5rem; }
+    #history-panel { border-top: 4px solid var(--ioe-cyan); }
+    .hist-table th { color: var(--ioe-navy); }
+    dialog { border-radius: 16px; }
+    dialog fieldset { border-color: #dce5f1; border-radius: 12px; }
+    @media (max-width: 640px) {
+      header { padding: .6rem .75rem; }
+      header h1 { gap: .5rem; font-size: 1rem; }
+      header h1::before { width: 42px; height: 42px; border-radius: 12px; }
+      main { width: min(100% - 1rem, 1280px); margin: .8rem auto; }
+      #open-settings { min-height: 38px; padding: .4rem .6rem; font-size: .85rem; }
+      #exam-top-panel { padding: .65rem; }
+      #question-panel { padding: 0 .85rem .9rem; }
+      #question-panel > .row:first-of-type { margin: 0 -.85rem .8rem; padding: .75rem .85rem; }
+      #q-number { font-size: 1.2rem; }
+      #options { grid-template-columns: 1fr; }
+      .option { min-height: 58px; }
+      #question-panel > .row:last-of-type {
+        gap: .5rem;
+        margin-right: -.85rem;
+        margin-left: -.85rem;
+        padding: .85rem;
+      }
+      #question-panel > .row:last-of-type > .row { gap: .4rem; }
+      #prev, #next, #submit { min-height: 44px; padding: .45rem .65rem; font-size: .9rem; }
+      #timer { padding: .3rem .45rem; font-size: .85rem; }
+      #restart { min-height: 32px; font-size: .8rem; }
+    }
   </style>
 </head>
 <body>
@@ -162,17 +393,8 @@
       </div>
     </section>
 
-    <section id="history-panel" class="panel" aria-labelledby="history-heading" hidden>
-      <div class="row">
-        <h2 id="history-heading">Lịch sử điểm</h2>
-        <button id="clear-history" class="secondary" type="button">Xóa lịch sử</button>
-      </div>
-      <p id="history-summary" class="muted"></p>
-      <div id="history-groups"></div>
-    </section>
-
     <section id="exam" aria-label="Bài thi">
-      <div class="panel">
+      <div id="exam-top-panel" class="panel">
         <p id="exam-notice" role="alert" hidden></p>
         <div class="row">
           <strong id="exam-title"></strong>
@@ -180,7 +402,7 @@
         </div>
         <div id="nav" aria-label="Chọn câu hỏi"></div>
       </div>
-      <div class="panel">
+      <div id="question-panel" class="panel">
         <div class="row"><strong id="q-number"></strong><span id="q-hint" class="muted"></span></div>
         <h2 id="prompt"></h2>
         <img id="stimulus" alt="Hình minh họa của câu hỏi" hidden>
@@ -208,6 +430,15 @@
         <p id="result-note"></p>
         <button id="retake" class="retake" type="button">🔄 Thi lại bộ đề này</button>
       </div>
+    </section>
+
+    <section id="history-panel" class="panel" aria-labelledby="history-heading" hidden>
+      <div class="row">
+        <h2 id="history-heading">Lịch sử điểm</h2>
+        <button id="clear-history" class="secondary" type="button">Xóa lịch sử</button>
+      </div>
+      <p id="history-summary" class="muted"></p>
+      <div id="history-groups"></div>
     </section>
   </main>
 
@@ -618,7 +849,7 @@
       updateTimer();
       if (!submitted) timerId = setInterval(updateTimer, 1000);
       saveProgress();
-      $("#exam").scrollIntoView({ behavior: "smooth" });
+      $("#question-panel").scrollIntoView({ behavior: "smooth", block: "start" });
       return !!usable;
     }
 
@@ -656,7 +887,6 @@
       const resumed = startExam(data, key);
       setStatus(resumed ? "Đã khôi phục bài thi." : "Bài thi đã bắt đầu.", "success");
       playListenOnEntry(current);
-      $("#exam").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function retakeSelectedExam() {
@@ -669,7 +899,6 @@
       renderHistory();
       setStatus("Bài thi mới đã bắt đầu.", "success");
       playListenOnEntry(current);
-      $("#exam").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function renderNav() {
